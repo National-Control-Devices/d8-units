@@ -1,0 +1,6 @@
+name: unit
+type: module
+description: 'Convert units.'
+package: Custom
+version: 8.x
+core: 8.x

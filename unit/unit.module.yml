@@ -1,0 +1,26 @@
+<?php
+/**
+ * @File
+ * Example custom module for Drupal 8.
+ * @author 
+ */
+
+/**
+ * Implementing hook_menu().
+ */
+
+
+ drupal_add_css(drupal_get_path('module', 'custom/example') . '/css/custom.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+
+
+
+function example_menu() {
+  // The paths given here need to match the ones in example.routing.yml exactly.
+  $items['/mypage/page'] = array(
+    'title' => 'First page',
+    'description' => 'This is a example page.',
+    // The name of the route from example.routing.yml
+    'route' => 'example.my_page',
+  );
+  return $items;
+}
